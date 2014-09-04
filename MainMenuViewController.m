@@ -53,13 +53,14 @@
     
     //self.view.frame = self.view.bounds; //Adjust for iPad
     
+    CGFloat viewWidth = 320;
     CGFloat padding = 20;
-    CGFloat itemWidth = 100;
-    CGFloat itemHeight = 20;
-  
-   // self.wineButton.frame = CGRectMake(padding, padding*4, itemWidth, itemHeight);
-    self.whiskeyButton.frame = CGRectMake(padding, padding*4, itemWidth, itemHeight);
+    CGFloat itemWidth = viewWidth - padding - padding;
+    CGFloat itemHeight = 44;
     
+    self.wineButton.frame = CGRectMake(padding, 80, itemWidth, itemHeight);
+    CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
+    self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding, itemWidth, itemHeight);
 }
 
 
