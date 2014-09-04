@@ -9,10 +9,10 @@
 #import "ViewController.h"
 #import "WhiskeyViewController.h"
 
-@interface MainMenuViewController : ViewController
+@interface MainMenuViewController : UINavigationController
 
-@property (weak, nonatomic) UIButton *wineButton;
-@property (weak, nonatomic) UIButton *whiskeyButton;
+@property (strong, nonatomic) UIButton *wineButton;
+@property (strong, nonatomic) UIButton *whiskeyButton;
 
 
 

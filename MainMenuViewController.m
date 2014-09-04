@@ -15,12 +15,14 @@
     self.view = [[UIView alloc] init];
     
     //Allocate and initialiaze each of our views and the gesture recognizer
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem]; // Creating a strong reference to this object
+    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeSystem];
     
     [self.view addSubview:button];
-    [self.view addSubview:button];
+    [self.view addSubview:button2];
     
-    self.wineButton = button;
+    self.wineButton = button2; // Setting to a weak reference
+    // Could use self.wineButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.whiskeyButton = button;
 
 }
@@ -38,13 +40,13 @@
     [self.wineButton addTarget:self action:@selector(winePressed:) forControlEvents:UIControlEventTouchUpInside];
     
     // Set the title of the button
-    [self.wineButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
+    [self.wineButton setTitle:NSLocalizedString(@"Wine!", @"Calculate command") forState:UIControlStateNormal];
 
     // Tells 'self.calculateButton' that when a finger is lifted from the button while still inside its bounds, to call '[self -buttonPressed:]'
     [self.whiskeyButton addTarget:self action:@selector(whiskeyPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     // Set the title of the button
-    [self.whiskeyButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
+    [self.whiskeyButton setTitle:NSLocalizedString(@"Whiskey!", @"Calculate command") forState:UIControlStateNormal];
 
 }
 
@@ -58,9 +60,11 @@
     CGFloat itemWidth = viewWidth - padding - padding;
     CGFloat itemHeight = 44;
     
-    self.wineButton.frame = CGRectMake(padding, 80, itemWidth, itemHeight);
+    self.wineButton.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
     CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
+    NSLog(@"The position of the wine button is %f, %f, %f, %f", padding, padding, itemWidth, itemHeight);
     self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding, itemWidth, itemHeight);
+    NSLog(@"The position of the whiskey button is %f, %f, %f, %f", padding, bottomOfWineButton + padding, itemWidth, itemHeight);
 }
 
 
