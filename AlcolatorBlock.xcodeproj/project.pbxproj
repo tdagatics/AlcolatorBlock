@@ -21,6 +21,7 @@
 		43D0662919B699E80065C55A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D0660B19B699E70065C55A /* UIKit.framework */; };
 		43D0663119B699E80065C55A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43D0662F19B699E80065C55A /* InfoPlist.strings */; };
 		43D0663319B699E80065C55A /* AlcolatorBlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D0663219B699E80065C55A /* AlcolatorBlockTests.m */; };
+		43FB9A7F19B803A800384BAB /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43FB9A7E19B803A800384BAB /* MainMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		43D0662E19B699E80065C55A /* AlcolatorBlockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlcolatorBlockTests-Info.plist"; sourceTree = "<group>"; };
 		43D0663019B699E80065C55A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43D0663219B699E80065C55A /* AlcolatorBlockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlcolatorBlockTests.m; sourceTree = "<group>"; };
+		43FB9A7D19B803A800384BAB /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		43FB9A7E19B803A800384BAB /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 		43D065FB19B699E70065C55A = {
 			isa = PBXGroup;
 			children = (
+				43FB9A7D19B803A800384BAB /* MainMenuViewController.h */,
+				43FB9A7E19B803A800384BAB /* MainMenuViewController.m */,
 				437ABFB419B7EC8500E0D352 /* WhiskeyViewController.h */,
 				437ABFB519B7EC8500E0D352 /* WhiskeyViewController.m */,
 				43D0660D19B699E70065C55A /* AlcolatorBlock */,
@@ -254,6 +259,7 @@
 				437ABFB619B7EC8500E0D352 /* WhiskeyViewController.m in Sources */,
 				43D0661819B699E70065C55A /* AppDelegate.m in Sources */,
 				43D0661419B699E70065C55A /* main.m in Sources */,
+				43FB9A7F19B803A800384BAB /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
