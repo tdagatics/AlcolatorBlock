@@ -14,6 +14,8 @@
     // Allocate and initialize the all-encompassing view
     self.view = [[UIView alloc] init];
     
+    
+    
     //Allocate and initialiaze each of our views and the gesture recognizer
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem]; // Creating a strong reference to this object
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -27,11 +29,17 @@
 
 }
 
+// Copied code from Stack Overflow. Discuss in greater detail with Bjorn. Is this re-sizing the controls properly?
+
+
+// End rotation code
 
 - (void)viewDidLoad
 {
     // Calls the superclass's implementation
     [super viewDidLoad];
+
+    
 	// Do any additional setup after loading the view, typically from a nib.
     // Set our primary view's background color to lightGrayColor
     self.view.backgroundColor = [UIColor lightGrayColor];
@@ -55,16 +63,38 @@
     
     //self.view.frame = self.view.bounds; //Adjust for iPad
     
+    NSString *deviceName = ([UIDevice currentDevice].name);
+    
+    if ([deviceName  isEqual: @"iPhone Simulator"]) {
+    if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
+    NSLog(@"Portrait!");
     CGFloat viewWidth = 320;
     CGFloat padding = 20;
+    CGFloat ypadding = 50;
     CGFloat itemWidth = viewWidth - padding - padding;
     CGFloat itemHeight = 44;
     
-    self.wineButton.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
+    self.wineButton.frame = CGRectMake(padding, padding + ypadding, itemWidth,
+    itemHeight);
     CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
-    NSLog(@"The position of the wine button is %f, %f, %f, %f", padding, padding, itemWidth, itemHeight);
-    self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding, itemWidth, itemHeight);
-    NSLog(@"The position of the whiskey button is %f, %f, %f, %f", padding, bottomOfWineButton + padding, itemWidth, itemHeight);
+    self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding + ypadding, itemWidth, itemHeight);
+    
+   } else if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
+    NSLog(@"Landscape!");
+    CGFloat viewWidth = 480;
+    CGFloat padding = 50;
+    CGFloat ypadding = 50;
+    CGFloat itemWidth = viewWidth - padding - padding;
+    CGFloat itemHeight = 44;
+        
+    self.wineButton.frame = CGRectMake(padding, padding + ypadding, itemWidth,itemHeight);
+    CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
+    self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding + ypadding, itemWidth, itemHeight);
+    }
+   }
+    else NSLog(@"Ipad!");
+    
+    // Add iPad code
 }
 
 
