@@ -79,7 +79,7 @@
     CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
     self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding + ypadding, itemWidth, itemHeight);
     
-   } else if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
+     } else if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
     NSLog(@"Landscape!");
     CGFloat viewWidth = 480;
     CGFloat padding = 50;
@@ -90,10 +90,9 @@
     self.wineButton.frame = CGRectMake(padding, padding + ypadding, itemWidth,itemHeight);
     CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
     self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding + ypadding, itemWidth, itemHeight);
-    }
-   }
-    else NSLog(@"Ipad!");
-    if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
+     } }
+    //NSLog(@"Ipad!");
+    else if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
         NSLog(@"Portrait!");
         CGFloat viewWidth = 768;
         CGFloat padding = 20;
