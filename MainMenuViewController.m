@@ -93,6 +93,31 @@
     }
    }
     else NSLog(@"Ipad!");
+    if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
+        NSLog(@"Portrait!");
+        CGFloat viewWidth = 768;
+        CGFloat padding = 20;
+        CGFloat ypadding = 50;
+        CGFloat itemWidth = viewWidth - padding - padding;
+        CGFloat itemHeight = 44;
+        
+        self.wineButton.frame = CGRectMake(padding, padding + ypadding, itemWidth,
+                                           itemHeight);
+        CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
+        self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding + ypadding, itemWidth, itemHeight);
+        
+    } else if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
+        NSLog(@"Landscape!");
+        CGFloat viewWidth = 1004;
+        CGFloat padding = 50;
+        CGFloat ypadding = 50;
+        CGFloat itemWidth = viewWidth - padding - padding;
+        CGFloat itemHeight = 44;
+        
+        self.wineButton.frame = CGRectMake(padding, padding + ypadding, itemWidth,itemHeight);
+        CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
+        self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding + ypadding, itemWidth, itemHeight);
+    }
     
     // Add iPad code
 }
