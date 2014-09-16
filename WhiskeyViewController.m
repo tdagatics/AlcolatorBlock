@@ -10,9 +10,16 @@
 
 @implementation WhiskeyViewController
 
+- (instancetype) init {
+    self = [super init];
+    if (self) {
+        self.title = NSLocalizedString(@"Whiskey", @"whiskey");
+    }
+    return self;
+}
 -(void) viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Whiskey", @"whiskey");
+    self.view.backgroundColor = [UIColor colorWithRed: 0.992 green: 0.992 blue:0.558 alpha:1];
     }
 
 -(void)buttonPressed:(UIButton *)sender;
@@ -44,7 +51,9 @@
     
     if (numberOfWhiskeyGlassesForEquivalentAlcoholAmount == 1) {
         whiskeyText = NSLocalizedString(@"shot", "singular shot");
+        self.title = [NSString stringWithFormat:@"%f shot of whiskey", numberOfWhiskeyGlassesForEquivalentAlcoholAmount];
     } else {
+        self.title = [NSString stringWithFormat:@"%f shots of whiskey", numberOfWhiskeyGlassesForEquivalentAlcoholAmount];
         whiskeyText = NSLocalizedString(@"shots", "plural of shot");
     }
     

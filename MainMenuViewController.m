@@ -38,7 +38,7 @@
 {
     // Calls the superclass's implementation
     [super viewDidLoad];
-
+    //self.title = NSLocalizedString(@"Choose Your Drink", @"choose drink");
     
 	// Do any additional setup after loading the view, typically from a nib.
     // Set our primary view's background color to lightGrayColor
@@ -58,19 +58,36 @@
 
 }
 
+
 -(void) viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
+    //Eloquent code
+    //CGFloat viewWidth = self.view.bounds.size.width;
+    //CGFloat viewHeight = self.view.bounds.size.height;
+    //CGFloat padding = 20;
+    //CGFloat itemWidth = viewWidth - (2*padding);
+    //CGFloat itemHeightRatio = 1.0/6.0;
+    //CGFloat itemHeight = (viewHeight - 2*padding)*itemHeightRatio;
+    //self.wineButton.frame = CGRectMake(padding, padding*4, itemWidth, itemHeight);
+    //CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
+    //self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding, itemWidth, itemHeight);
+                                       
+
+    //self.view.frame = self.view.bounds; //Adpojust for iPad
     
-    //self.view.frame = self.view.bounds; //Adjust for iPad
+    
+    //Device Query Code
+    
     
     NSString *deviceName = ([UIDevice currentDevice].name);
     
-    if ([deviceName  isEqual: @"iPhone Simulator"]) {
+    if ([deviceName isEqual: @"iPhone Simulator"]) {
+        
     if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
     NSLog(@"Portrait!");
     CGFloat viewWidth = 320;
     CGFloat padding = 20;
-    CGFloat ypadding = 50;
+    CGFloat ypadding = 80;
     CGFloat itemWidth = viewWidth - padding - padding;
     CGFloat itemHeight = 44;
     
@@ -99,14 +116,14 @@
         CGFloat ypadding = 50;
         CGFloat itemWidth = viewWidth - padding - padding;
         CGFloat itemHeight = 44;
-        
+    
         self.wineButton.frame = CGRectMake(padding, padding + ypadding, itemWidth,
                                            itemHeight);
         CGFloat bottomOfWineButton = CGRectGetMaxY(self.wineButton.frame);
         self.whiskeyButton.frame = CGRectMake(padding, bottomOfWineButton + padding + ypadding, itemWidth, itemHeight);
         
     } else if (UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
-        NSLog(@"Landscape!");
+                NSLog(@"Landscape!");
         CGFloat viewWidth = 1004;
         CGFloat padding = 50;
         CGFloat ypadding = 50;
@@ -119,6 +136,7 @@
     }
     
     // Add iPad code
+    // NSLog(@"Following through without hitting conditionals");
 }
 
 

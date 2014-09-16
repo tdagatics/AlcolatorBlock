@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+//Declare that BLCAppDelegate conforms to the UITabBarControllerDelegate protocol 
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarDelegate>
 @property (strong, nonatomic) UIWindow *window;
 
 @end

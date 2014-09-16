@@ -21,6 +21,18 @@
 
 @implementation ViewController
 
+- (instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Wine", @"wine");
+        // In the absence of icons, we assume moving the title to the middle of the tab
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0,-18)];
+    }
+    
+    return self;
+}
+
 -(void)loadView { // creates the view that the controller manages
     // Allocate and initialize the all-encompassing view
     self.view = [[UIView alloc] init];
@@ -57,6 +69,8 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     self.title = NSLocalizedString(@"Wine", @"wine");
     
+    
+    
     // Tells the text field that 'self', this instance of 'ViewController' shall be treated as the text field's delegate
     self.beerPercentTextField.delegate = self;
     
@@ -82,7 +96,7 @@
     
     // Gets rid of the maximum number of lines on the label
     self.resultLabel.numberOfLines = 0;
-
+    self.view.backgroundColor = [UIColor colorWithRed:0.741 green:0.925 blue:0.714 alpha:1]; /*#bdecb6*/
 }
 
 -(void) viewWillLayoutSubviews {
@@ -130,7 +144,10 @@
 //- (IBAction)sliderValueDidChange:(UISlider *)sender {
 -(void)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
+    //NSString *drink = self.title;
+    
     [self.beerPercentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 }
 
 //- (IBAction)buttonPressed:(UIButton *)sender {
@@ -168,9 +185,12 @@
     
     if (numberOfWineGlassesForEquivalentAlcoholAmount == 1) {
         wineText = NSLocalizedString(@"glass", @"singular glass");
+        self.title = [NSString stringWithFormat:@"%f glass of wine", numberOfWineGlassesForEquivalentAlcoholAmount];
     } else {
         wineText = NSLocalizedString(@"glasses", @"plural of glass");
+        self.title = [NSString stringWithFormat:@"%f glasses of wine", numberOfWineGlassesForEquivalentAlcoholAmount];
     }
+    
     
     // generate the result text, and display it on the label
     

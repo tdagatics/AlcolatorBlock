@@ -6,9 +6,10 @@
 //  Copyright (c) 2014 Black Rail Capital. All rights reserved.
 //
 
-#import "ViewController.h"
 #import "AppDelegate.h"
-#import "MainMenuViewController.h"
+#import "ViewController.h"
+//#import "MainMenuViewController.h"
+#import "WhiskeyViewController.h"
 
 @implementation AppDelegate
 
@@ -18,15 +19,31 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //ViewController *viewController = [[ViewController alloc] init];
     //self.window.rootViewController = viewController;
-    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
-    self.window.rootViewController = navigationController;
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    ViewController *wineVC = [[ViewController alloc] init];
+    WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc] init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = @[wineVC, whiskeyVC];
+    
+    self.window.rootViewController = tabBarVC;
+    
+    //MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
+    //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
+    //self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
     [self.window makeKeyAndVisible];
     return YES;
 }
-							
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    NSLog(@"New View Conrtroller Selcted to %@", viewController.accessibilityLabel);
+    return YES;
+}
+
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
