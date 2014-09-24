@@ -8,7 +8,7 @@
 
 #import "BLCViewController.h"
 
-@interface ViewController () <UITextFieldDelegate> // We declare here that the view controller subclass conforms to the UITextFieldDelegate protocol, since UIViewController doesn't conform out of the box
+@interface BLCViewController () <UITextFieldDelegate> // We declare here that the view controller subclass conforms to the UITextFieldDelegate protocol, since UIViewController doesn't conform out of the box
 
 //@property (weak, nonatomic) IBOutlet UITextField *beerPercentTextField;
 //@property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation ViewController
+@implementation BLCViewController
 
 -(void)loadView { // creates the view that the controller manages
     // Allocate and initialize the all-encompassing view

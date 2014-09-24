@@ -23,8 +23,14 @@
     [self.wineButton setTitle:@"Wine" forState:UIControlStateNormal];
     [self.whiskeyButton setTitle:@"Whiskey" forState:UIControlStateNormal];
     
-    self.wineButton.frame = CGRectMake(0,0,40,40);
-    self.whiskeyButton.frame = CGRectMake(0, 40, 40, 40);
+    CGFloat xpadding = 40;
+    CGFloat statusBarHeight = 20;
+    CGFloat navigationBarHeight = 44;
+    CGFloat ypadding = statusBarHeight + navigationBarHeight + 20;
+    self.wineButton.frame = CGRectMake(xpadding,ypadding,100,40);
+    [self.wineButton addTarget:self action:@selector(winePressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.whiskeyButton addTarget:self action:@selector(whiskeyPressed:) forControlEvents:UIControlEventTouchUpInside];
+    self.whiskeyButton.frame = CGRectMake(xpadding*4, ypadding, 100, 40);
     [self.view addSubview:self.wineButton];
     [self.view addSubview:self.whiskeyButton];
     NSLog(@"Main Menu View Controller Loaded.");
@@ -32,18 +38,21 @@
 }
 
 -(void)winePressed:(UIButton *) sender {
-    ViewController *wineVC = [[ViewController alloc] init];
+    BLCViewController *wineVC = [[BLCViewController alloc] init];
+    NSLog(@"Wine button pressed.");
     [self.navigationController pushViewController:wineVC animated:YES];
 }
 
 
 -(void)whiskeyPressed:(UIButton *) sender {
-    WhiskeyViewController *wineVC = [[WhiskeyViewController alloc] init];
+    BLCWhiskeyViewController *wineVC = [[BLCWhiskeyViewController alloc] init];
+    NSLog(@"Whiskey button pressed.");
     [self.navigationController pushViewController:wineVC animated:YES];
 }
 
 -(void)viewDidLoad
 {
+    
 }
 
 @end

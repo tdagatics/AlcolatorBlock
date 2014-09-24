@@ -8,7 +8,7 @@
 
 #import "BLCWhiskeyViewController.h"
 
-@implementation WhiskeyViewController
+@implementation BLCWhiskeyViewController
 
 -(void) viewDidLoad {
     [super viewDidLoad];

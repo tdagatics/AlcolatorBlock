@@ -9,7 +9,7 @@
 #import "BLCViewController.h"
 #import "BLCWhiskeyViewController.h"
 
-@interface BLCMainMenuViewController : ViewController
+@interface BLCMainMenuViewController : BLCViewController
 
 @property (weak, nonatomic) UIButton *wineButton;
 @property (weak, nonatomic) UIButton *whiskeyButton;

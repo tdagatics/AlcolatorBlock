@@ -8,6 +8,6 @@
 
 #import "BLCViewController.h"
 
-@interface WhiskeyViewController : ViewController
+@interface BLCWhiskeyViewController : BLCViewController
 
 @end
