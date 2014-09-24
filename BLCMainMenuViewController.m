@@ -45,9 +45,9 @@
 
 
 -(void)whiskeyPressed:(UIButton *) sender {
-    BLCWhiskeyViewController *wineVC = [[BLCWhiskeyViewController alloc] init];
+    BLCWhiskeyViewController *whiskeyVC = [[BLCWhiskeyViewController alloc] init];
     NSLog(@"Whiskey button pressed.");
-    [self.navigationController pushViewController:wineVC animated:YES];
+    [self.navigationController pushViewController:whiskeyVC animated:YES];
 }
 
 -(void)viewDidLoad
