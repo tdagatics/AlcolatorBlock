@@ -16,6 +16,8 @@
 -(void)loadView { // creates the view that the controller manages
     // Allocate and initialize the all-encompassing view
     self.view = [[UIView alloc] init];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.title = @"Main Menu";
     self.wineButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.whiskeyButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.wineButton setTitle:@"Wine" forState:UIControlStateNormal];
