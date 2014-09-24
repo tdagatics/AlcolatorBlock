@@ -13,16 +13,19 @@
 -(void)loadView { // creates the view that the controller manages
     // Allocate and initialize the all-encompassing view
     self.view = [[UIView alloc] init];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.wineButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.wineButton setTitle:@"Wine" forState:UIControlStateNormal];
+    self.whiskeyButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.whiskeyButton setTitle:@"Whiskey" forState:UIControlStateNormal];
     
-    //Allocate and initialiaze each of our views and the gesture recognizer
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.wineButton addTarget:self action:@selector(winePressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.whiskeyButton addTarget:self action:@selector(whiskeyPressed:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:button];
-    [self.view addSubview:button];
+    [self.view addSubview:self.wineButton];
+    [self.view addSubview:self.whiskeyButton];
     
-    self.wineButton = button;
-    self.whiskeyButton = button;
-
+    
 }
 
 
@@ -48,16 +51,17 @@
 
 }
 
+
 -(void) viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    //self.view.frame = self.view.bounds; //Adjust for iPad
+    self.view.frame = self.view.bounds; //Adjust for iPad
     
     CGFloat padding = 20;
     CGFloat itemWidth = 100;
     CGFloat itemHeight = 20;
   
-   // self.wineButton.frame = CGRectMake(padding, padding*4, itemWidth, itemHeight);
+    self.wineButton.frame = CGRectMake(padding, padding*4, itemWidth, itemHeight);
     self.whiskeyButton.frame = CGRectMake(padding, padding*4, itemWidth, itemHeight);
     
 }
