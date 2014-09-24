@@ -6,17 +6,23 @@
 //  Copyright (c) 2014 Black Rail Capital. All rights reserved.
 //
 
+<<<<<<< HEAD
 #import "AppDelegate.h"
 #import "ViewController.h"
 //#import "MainMenuViewController.h"
 #import "WhiskeyViewController.h"
+=======
+#import "BLCViewController.h"
+#import "AppDelegate.h"
+#import "BLCMainMenuViewController.h"
+>>>>>>> basic-nav
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+<<<<<<< HEAD
     //ViewController *viewController = [[ViewController alloc] init];
     //self.window.rootViewController = viewController;
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -30,12 +36,17 @@
     //MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
     //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
     //self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
-    
+=======
+    //Override point for customization after application launches
+    BLCMainMenuViewController *mainMenuViewController = [[BLCMainMenuViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
+    self.window.rootViewController = navigationController;
+>>>>>>> basic-nav
     [self.window makeKeyAndVisible];
     return YES;
 }
 
+<<<<<<< HEAD
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
     NSLog(@"New View Conrtroller Selcted to %@", viewController.accessibilityLabel);
@@ -44,6 +55,8 @@
 
 
 
+=======
+>>>>>>> basic-nav
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

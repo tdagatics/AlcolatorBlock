@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Black Rail Capital. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BLCViewController.h"
 
-@interface WhiskeyViewController : ViewController
+@interface BLCWhiskeyViewController : BLCViewController
 
 @end

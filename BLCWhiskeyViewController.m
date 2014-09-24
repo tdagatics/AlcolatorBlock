@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Black Rail Capital. All rights reserved.
 //
 
-#import "WhiskeyViewController.h"
+#import "BLCWhiskeyViewController.h"
 
-@implementation WhiskeyViewController
+@implementation BLCWhiskeyViewController
 
 - (instancetype) init {
     self = [super init];

@@ -6,20 +6,22 @@
 //  Copyright (c) 2014 Black Rail Capital. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BLCViewController.h"
 
-@interface ViewController () <UITextFieldDelegate> // We declare here that the view controller subclass conforms to the UITextFieldDelegate protocol, since UIViewController doesn't conform out of the box
+@interface BLCViewController () <UITextFieldDelegate> // We declare here that the view controller subclass conforms to the UITextFieldDelegate protocol, since UIViewController doesn't conform out of the box
 
 //@property (weak, nonatomic) IBOutlet UITextField *beerPercentTextField;
 //@property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
 //@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) UIButton *calculateButton;
-@property (weak, nonatomic) UITapGestureRecognizer *hideKeyboardTapGestureRecognizer;
+@property (weak, nonatomic) UITapGestureRecognizer* hideKeyBoardTapGestureRecognizer;
+@property (weak, nonatomic) UIButton* wineButton;
+@property (weak, nonatomic) UIButton* whiskeyButton;
 
 
 @end
 
-@implementation ViewController
+@implementation BLCViewController
 
 - (instancetype) init {
     self = [super init];
@@ -56,7 +58,7 @@
     self.beerCountSlider = slider;
     self.resultLabel = label;
     self.calculateButton = button;
-    self.hideKeyboardTapGestureRecognizer = tap;
+    self.hideKeyBoardTapGestureRecognizer = tap;
 }
     
     
@@ -67,7 +69,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     // Set our primary view's background color to lightGrayColor
     self.view.backgroundColor = [UIColor lightGrayColor];
-    self.title = NSLocalizedString(@"Wine", @"wine");
+    self.title = NSLocalizedString(@"Wine", @"Wine Calculator");
     
     
     
@@ -92,11 +94,17 @@
     [self.calculateButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
     
     // Tells the tap gesture recognizer to call '[self - tapGestureDidFire:]' when it detects a tap.
-    [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
+    [self.hideKeyBoardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
     
     // Gets rid of the maximum number of lines on the label
     self.resultLabel.numberOfLines = 0;
+<<<<<<< HEAD:AlcolatorBlock/ViewController.m
     self.view.backgroundColor = [UIColor colorWithRed:0.741 green:0.925 blue:0.714 alpha:1]; /*#bdecb6*/
+=======
+    
+    
+
+>>>>>>> basic-nav:AlcolatorBlock/BLCViewController.m
 }
 
 -(void) viewWillLayoutSubviews {

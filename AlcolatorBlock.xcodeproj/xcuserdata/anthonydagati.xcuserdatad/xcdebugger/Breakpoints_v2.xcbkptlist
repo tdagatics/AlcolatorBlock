@@ -10,12 +10,21 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MainMenuViewController.m"
+<<<<<<< HEAD
             timestampString = "431648068.868524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
             landmarkName = "-viewWillLayoutSubviews"
+=======
+            timestampString = "433229920.41907"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-loadView"
+>>>>>>> basic-nav
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,6 +34,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "MainMenuViewController.m"
             timestampString = "431648068.868524"
             startingColumnNumber = "9223372036854775807"
@@ -32,6 +42,15 @@
             startingLineNumber = "84"
             endingLineNumber = "84"
             landmarkName = "-viewWillLayoutSubviews"
+=======
+            filePath = "BLCMainMenuViewController.m"
+            timestampString = "433269419.637145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-whiskeyPressed:"
+>>>>>>> basic-nav
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,6 +60,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "MainMenuViewController.m"
             timestampString = "431648068.868524"
             startingColumnNumber = "9223372036854775807"
@@ -48,6 +68,15 @@
             startingLineNumber = "99"
             endingLineNumber = "99"
             landmarkName = "-viewWillLayoutSubviews"
+=======
+            filePath = "BLCMainMenuViewController.m"
+            timestampString = "433269419.637145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-whiskeyPressed:"
+>>>>>>> basic-nav
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,6 +86,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "MainMenuViewController.m"
             timestampString = "431648068.868524"
             startingColumnNumber = "9223372036854775807"
@@ -64,6 +94,15 @@
             startingLineNumber = "82"
             endingLineNumber = "82"
             landmarkName = "-viewWillLayoutSubviews"
+=======
+            filePath = "BLCMainMenuViewController.m"
+            timestampString = "433269419.637145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-winePressed:"
+>>>>>>> basic-nav
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,6 +112,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "MainMenuViewController.m"
             timestampString = "431648068.868524"
             startingColumnNumber = "9223372036854775807"
@@ -80,6 +120,15 @@
             startingLineNumber = "83"
             endingLineNumber = "83"
             landmarkName = "-viewWillLayoutSubviews"
+=======
+            filePath = "AlcolatorBlock/AppDelegate.m"
+            timestampString = "433264619.373857"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+>>>>>>> basic-nav
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,6 +138,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "MainMenuViewController.m"
             timestampString = "431648068.868524"
             startingColumnNumber = "9223372036854775807"
@@ -96,6 +146,15 @@
             startingLineNumber = "65"
             endingLineNumber = "65"
             landmarkName = "-viewWillLayoutSubviews"
+=======
+            filePath = "AlcolatorBlock/AppDelegate.m"
+            timestampString = "433264619.373857"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+>>>>>>> basic-nav
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,6 +164,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "AlcolatorBlock/AppDelegate.h"
             timestampString = "432599566.702674"
             startingColumnNumber = "9223372036854775807"
@@ -141,6 +201,16 @@
                   offsetFromSymbolStart = "31">
                </Location>
             </Locations>
+=======
+            filePath = "BLCMainMenuViewController.m"
+            timestampString = "433264650.07983"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "@implementation BLCMainMenuViewController"
+            landmarkType = "3">
+>>>>>>> basic-nav
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -149,6 +219,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "AlcolatorBlock/AppDelegate.m"
             timestampString = "432600230.609136"
             startingColumnNumber = "9223372036854775807"
@@ -156,6 +227,15 @@
             startingLineNumber = "40"
             endingLineNumber = "40"
             landmarkName = "-tabBarController:shouldSelectViewController:"
+=======
+            filePath = "BLCMainMenuViewController.m"
+            timestampString = "433269419.637145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "-loadView"
+>>>>>>> basic-nav
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
