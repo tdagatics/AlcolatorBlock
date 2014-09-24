@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Black Rail Capital. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "WhiskeyViewController.h"
+#import "BLCViewController.h"
+#import "BLCWhiskeyViewController.h"
 
-@interface MainMenuViewController : ViewController
+@interface BLCMainMenuViewController : ViewController
 
 @property (weak, nonatomic) UIButton *wineButton;
 @property (weak, nonatomic) UIButton *whiskeyButton;

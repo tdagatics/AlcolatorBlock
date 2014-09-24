@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Black Rail Capital. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BLCViewController.h"
 
 @interface ViewController () <UITextFieldDelegate> // We declare here that the view controller subclass conforms to the UITextFieldDelegate protocol, since UIViewController doesn't conform out of the box
 
