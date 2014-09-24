@@ -112,10 +112,13 @@
     
     //self.view.frame = self.view.bounds; //Adjust for iPad
     
-    CGFloat viewWidth = 320;
+    CGFloat viewWidth = self.view.bounds.size.width;
+    CGFloat viewHeight = self.view.bounds.size.height;
     CGFloat padding = 20;
-    CGFloat itemWidth = viewWidth - padding - padding;
-    CGFloat itemHeight = 44;
+    CGFloat itemWidth = viewWidth - (2*padding);
+    CGFloat itemHeightRatio = 1.0/7.0;
+    CGFloat itemHeight = (viewHeight - (2*padding))*itemHeightRatio
+    ;
     
     self.beerPercentTextField.frame = CGRectMake(padding, 100, itemWidth, itemHeight);
     
