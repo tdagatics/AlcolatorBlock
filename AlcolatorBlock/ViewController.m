@@ -14,7 +14,9 @@
 //@property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
 //@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) UIButton *calculateButton;
-@property (weak, nonatomic) UITapGestureRecognizer *hideKeyboardTapGestureRecognizer;
+@property (weak, nonatomic) UITapGestureRecognizer* hideKeyBoardTapGestureRecognizer;
+@property (weak, nonatomic) UIButton* wineButton;
+@property (weak, nonatomic) UIButton* whiskeyButton;
 
 
 @end
@@ -44,7 +46,7 @@
     self.beerCountSlider = slider;
     self.resultLabel = label;
     self.calculateButton = button;
-    self.hideKeyboardTapGestureRecognizer = tap;
+    self.hideKeyBoardTapGestureRecognizer = tap;
 }
     
     
@@ -55,7 +57,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     // Set our primary view's background color to lightGrayColor
     self.view.backgroundColor = [UIColor lightGrayColor];
-    self.title = NSLocalizedString(@"Wine", @"wine");
+    self.title = NSLocalizedString(@"Wine", @"Wine Calculator");
     
     // Tells the text field that 'self', this instance of 'ViewController' shall be treated as the text field's delegate
     self.beerPercentTextField.delegate = self;
@@ -78,10 +80,12 @@
     [self.calculateButton setTitle:NSLocalizedString(@"Calculate!", @"Calculate command") forState:UIControlStateNormal];
     
     // Tells the tap gesture recognizer to call '[self - tapGestureDidFire:]' when it detects a tap.
-    [self.hideKeyboardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
+    [self.hideKeyBoardTapGestureRecognizer addTarget:self action:@selector(tapGestureDidFire:)];
     
     // Gets rid of the maximum number of lines on the label
     self.resultLabel.numberOfLines = 0;
+    
+    
 
 }
 

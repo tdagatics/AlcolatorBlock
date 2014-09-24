@@ -29,7 +29,7 @@
 }
 
 
-- (void)viewDidLoad
+- (void)viewDidLoad // Is this code redundant?
 {
     // Calls the superclass's implementation
     [super viewDidLoad];
@@ -63,7 +63,10 @@
   
     self.wineButton.frame = CGRectMake(padding, padding*4, itemWidth, itemHeight);
     self.whiskeyButton.frame = CGRectMake(padding, padding*4, itemWidth, itemHeight);
-    
+
+    [self.view addSubview:self.wineButton];
+    [self.view addSubview:self.whiskeyButton];
+
 }
 
 
