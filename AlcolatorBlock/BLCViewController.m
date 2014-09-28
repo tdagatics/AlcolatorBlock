@@ -85,7 +85,6 @@
     // Gets rid of the maximum number of lines on the label
     self.resultLabel.numberOfLines = 0;
     
-    
 
 }
 
@@ -133,21 +132,21 @@
 
 //- (IBAction)sliderValueDidChange:(UISlider *)sender {
 -(void)sliderValueDidChange:(UISlider *)sender {
-    NSString *wineOrWhiskey = [NSString stringWithFormat:@"%@", self.title];
-    NSLog(@"%@", wineOrWhiskey);
-    NSString *substring = [wineOrWhiskey substringToIndex:3];
-    if ([substring isEqualToString:@"Wine"]) {
-    NSLog(@"Slider value changed to %f", sender.value);
-    [self.beerPercentTextField resignFirstResponder];
-    self.title = [NSString stringWithFormat:@"Wine (%lf glasses)", sender.value];
-    }
-    else {
-    NSLog(@"Slider value changed to %f", sender.value);
-    [self.beerPercentTextField resignFirstResponder];
-    self.title = [NSString stringWithFormat:@"Whiskey (%lf glasses)", sender.value];
-    }
+ //   NSString *wineOrWhiskey = [NSString stringWithFormat:@"%@", self.title];
+ //   NSLog(@"%@", wineOrWhiskey);
+    //NSString *substring = [wineOrWhiskey substringToIndex:3];
     
-
+    //if ([substring isEqualToString:@"Wine"]) {
+   // if ([wineOrWhiskey rangeOfString:@"Wine"].location != NSNotFound) {
+    NSLog(@"Slider value changed to %f", sender.value);
+    [self.beerPercentTextField resignFirstResponder];
+   // self.title = [NSString stringWithFormat:@"Wine (%lf glasses)", sender.value];
+ //   }
+//    else {
+  //  NSLog(@"Slider value changed to %f", sender.value);
+  //  [self.beerPercentTextField resignFirstResponder];
+   // self.title = [NSString stringWithFormat:@"Whiskey (%lf glasses)", sender.value];
+//    }
 }
 
 
@@ -194,6 +193,7 @@
     
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.lf %@ of wine.", nil), numberOfBeers, beerText, numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     self.resultLabel.text = resultText;
+    self.title = [NSString stringWithFormat:(@"Wine (%.lf %@)"), numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     
 }
 
