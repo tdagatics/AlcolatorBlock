@@ -102,7 +102,6 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.741 green:0.925 blue:0.714 alpha:1]; /*#bdecb6*/
 =======
     
-    
 
 >>>>>>> basic-nav:AlcolatorBlock/BLCViewController.m
 }
@@ -154,12 +153,30 @@
 
 //- (IBAction)sliderValueDidChange:(UISlider *)sender {
 -(void)sliderValueDidChange:(UISlider *)sender {
+ //   NSString *wineOrWhiskey = [NSString stringWithFormat:@"%@", self.title];
+ //   NSLog(@"%@", wineOrWhiskey);
+    //NSString *substring = [wineOrWhiskey substringToIndex:3];
+    
+    //if ([substring isEqualToString:@"Wine"]) {
+   // if ([wineOrWhiskey rangeOfString:@"Wine"].location != NSNotFound) {
     NSLog(@"Slider value changed to %f", sender.value);
     //NSString *drink = self.title;
     
     [self.beerPercentTextField resignFirstResponder];
+<<<<<<< HEAD
     [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+=======
+   // self.title = [NSString stringWithFormat:@"Wine (%lf glasses)", sender.value];
+ //   }
+//    else {
+  //  NSLog(@"Slider value changed to %f", sender.value);
+  //  [self.beerPercentTextField resignFirstResponder];
+   // self.title = [NSString stringWithFormat:@"Whiskey (%lf glasses)", sender.value];
+//    }
+    self.title = [NSString stringWithFormat:@"%@", self.title];
+>>>>>>> basic-nav
 }
+
 
 //- (IBAction)buttonPressed:(UIButton *)sender {
 -(void)buttonPressed:(UIButton *)sender {
@@ -207,6 +224,7 @@
     
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.lf %@ of wine.", nil), numberOfBeers, beerText, numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     self.resultLabel.text = resultText;
+    self.title = [NSString stringWithFormat:(@"Wine (%.lf %@)"), numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     
 }
 
