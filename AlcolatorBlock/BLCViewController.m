@@ -133,9 +133,17 @@
 
 //- (IBAction)sliderValueDidChange:(UISlider *)sender {
 -(void)sliderValueDidChange:(UISlider *)sender {
+    NSString *titleText = self.title;
+    self.title = @"";
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    NSLog(@"%f glasses of %@", sender.value, self.title);
+    //self.title = titleText;
+    NSString *test = [NSString stringWithFormat:@"%@ (%lf glasses)", titleText, sender.value];
+    self.title = test;
+
 }
+
 
 //- (IBAction)buttonPressed:(UIButton *)sender {
 -(void)buttonPressed:(UIButton *)sender {
