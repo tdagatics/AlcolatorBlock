@@ -147,6 +147,7 @@
   //  [self.beerPercentTextField resignFirstResponder];
    // self.title = [NSString stringWithFormat:@"Whiskey (%lf glasses)", sender.value];
 //    }
+    self.title = [NSString stringWithFormat:@"%@", self.title];
 }
 
 
