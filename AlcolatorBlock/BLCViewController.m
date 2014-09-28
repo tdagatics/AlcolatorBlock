@@ -133,14 +133,20 @@
 
 //- (IBAction)sliderValueDidChange:(UISlider *)sender {
 -(void)sliderValueDidChange:(UISlider *)sender {
-    NSString *titleText = self.title;
-    self.title = @"";
+    NSString *wineOrWhiskey = [NSString stringWithFormat:@"%@", self.title];
+    NSLog(@"%@", wineOrWhiskey);
+    NSString *substring = [wineOrWhiskey substringToIndex:3];
+    if ([substring isEqualToString:@"Wine"]) {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
-    NSLog(@"%f glasses of %@", sender.value, self.title);
-    //self.title = titleText;
-    NSString *test = [NSString stringWithFormat:@"%@ (%lf glasses)", titleText, sender.value];
-    self.title = test;
+    self.title = [NSString stringWithFormat:@"Wine (%lf glasses)", sender.value];
+    }
+    else {
+    NSLog(@"Slider value changed to %f", sender.value);
+    [self.beerPercentTextField resignFirstResponder];
+    self.title = [NSString stringWithFormat:@"Whiskey (%lf glasses)", sender.value];
+    }
+    
 
 }
 
