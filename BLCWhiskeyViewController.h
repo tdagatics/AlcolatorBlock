@@ -10,4 +10,7 @@
 
 @interface BLCWhiskeyViewController : BLCViewController
 
+-(float)numberOfWhiskeyGlassesForEquivalentAlcoholAmount;
+
 @end
+

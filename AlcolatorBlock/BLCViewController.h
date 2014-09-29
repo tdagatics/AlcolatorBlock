@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface BLCViewController : UIViewController < UITextFieldDelegate >
 
 @property (weak, nonatomic) UITextField *beerPercentTextField;
