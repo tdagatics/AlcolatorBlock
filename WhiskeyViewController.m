@@ -20,11 +20,13 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed: 0.992 green: 0.992 blue:0.558 alpha:1];
+    self.title = @"Whiskey";
     }
 
 -(void)buttonPressed:(UIButton *)sender;
 {
     [self.beerPercentTextField resignFirstResponder];
+    
     
     int numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;
