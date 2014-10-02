@@ -9,7 +9,7 @@
 <<<<<<< HEAD
 #import "AppDelegate.h"
 #import "ViewController.h"
-//#import "MainMenuViewController.h"
+#import "MainMenuViewController.h"
 #import "WhiskeyViewController.h"
 =======
 #import "BLCViewController.h"
@@ -23,13 +23,19 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 <<<<<<< HEAD
+<<<<<<< HEAD
     //ViewController *viewController = [[ViewController alloc] init];
     //self.window.rootViewController = viewController;
+=======
+    MainMenuViewController *viewController = [[MainMenuViewController alloc] init];
+    self.window.rootViewController = viewController;
+>>>>>>> tabbed-nav
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     ViewController *wineVC = [[ViewController alloc] init];
     WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc] init];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     tabBarVC.viewControllers = @[wineVC, whiskeyVC];
+    tabBarVC.delegate = self;
     
     self.window.rootViewController = tabBarVC;
     
@@ -49,8 +55,13 @@
 <<<<<<< HEAD
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-    NSLog(@"New View Conrtroller Selcted to %@", viewController.accessibilityLabel);
+    NSLog(@"New View Controller Selected to %@", viewController.title);
     return YES;
+}
+
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    NSLog(@"New View Controller Selected to %@", viewController.title);
 }
 
 

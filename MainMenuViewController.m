@@ -147,11 +147,13 @@
 }
 
 -(void)winePressed:(UIButton *) sender {
+    [self.wineButton setTitle:@"Wine" forState:UIControlStateNormal];
     ViewController *wineVC = [[ViewController alloc] init];
     [self.navigationController pushViewController:wineVC animated:YES];
 }
 
 -(void)whiskeyPressed:(UIButton *) sender {
+    [self.whiskeyButton setTitle:@"Whiskey" forState:UIControlStateNormal];
     WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc] init];
     [self.navigationController pushViewController:whiskeyVC animated:YES];
 }
