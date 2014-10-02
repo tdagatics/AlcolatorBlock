@@ -24,6 +24,7 @@
     WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc] init];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     tabBarVC.viewControllers = @[wineVC, whiskeyVC];
+    tabBarVC.delegate = self;
     
     self.window.rootViewController = tabBarVC;
     
@@ -38,8 +39,13 @@
 
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-    NSLog(@"New View Conrtroller Selcted to %@", viewController.accessibilityLabel);
+    NSLog(@"New View Controller Selected to %@", viewController.title);
     return YES;
+}
+
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    NSLog(@"New View Controller Selected to %@", viewController.title);
 }
 
 

@@ -150,12 +150,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AlcolatorBlock/AppDelegate.m"
-            timestampString = "432600230.609136"
+            timestampString = "433901652.024677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-tabBarController:shouldSelectViewController:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlcolatorBlock/AppDelegate.m"
+            timestampString = "433902674.443234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-tabBarController:didSelectViewController:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
