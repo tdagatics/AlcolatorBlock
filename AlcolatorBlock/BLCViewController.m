@@ -98,12 +98,12 @@
     
     // Gets rid of the maximum number of lines on the label
     self.resultLabel.numberOfLines = 0;
-<<<<<<< HEAD:AlcolatorBlock/ViewController.m
+//<<<<<<< HEAD:AlcolatorBlock/ViewController.m
     self.view.backgroundColor = [UIColor colorWithRed:0.741 green:0.925 blue:0.714 alpha:1]; /*#bdecb6*/
-=======
+//=======
     
 
->>>>>>> basic-nav:AlcolatorBlock/BLCViewController.m
+//>>>>>>> basic-nav:AlcolatorBlock/BLCViewController.m
 }
 
 -(void) viewWillLayoutSubviews {
@@ -163,9 +163,7 @@
     //NSString *drink = self.title;
     
     [self.beerPercentTextField resignFirstResponder];
-<<<<<<< HEAD
     [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
-=======
    // self.title = [NSString stringWithFormat:@"Wine (%lf glasses)", sender.value];
  //   }
 //    else {
@@ -174,7 +172,6 @@
    // self.title = [NSString stringWithFormat:@"Whiskey (%lf glasses)", sender.value];
 //    }
     self.title = [NSString stringWithFormat:@"%@", self.title];
->>>>>>> basic-nav
 }
 
 

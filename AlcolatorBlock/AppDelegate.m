@@ -6,33 +6,29 @@
 //  Copyright (c) 2014 Black Rail Capital. All rights reserved.
 //
 
-<<<<<<< HEAD
-#import "AppDelegate.h"
-#import "ViewController.h"
-#import "MainMenuViewController.h"
-#import "WhiskeyViewController.h"
-=======
+//<<<<<<< HEAD
+//#import "AppDelegate.h"
+//#import "ViewController.h"
+//#import "MainMenuViewController.h"
+//#import "WhiskeyViewController.h"
+//=======
 #import "BLCViewController.h"
 #import "AppDelegate.h"
 #import "BLCMainMenuViewController.h"
->>>>>>> basic-nav
+//>>>>>>> basic-nav
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-<<<<<<< HEAD
-<<<<<<< HEAD
     //ViewController *viewController = [[ViewController alloc] init];
     //self.window.rootViewController = viewController;
-=======
-    MainMenuViewController *viewController = [[MainMenuViewController alloc] init];
+    BLCMainMenuViewController *viewController = [[BLCMainMenuViewController alloc] init];
     self.window.rootViewController = viewController;
->>>>>>> tabbed-nav
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    ViewController *wineVC = [[ViewController alloc] init];
-    WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc] init];
+    BLCViewController *wineVC = [[BLCViewController alloc] init];
+    BLCWhiskeyViewController *whiskeyVC = [[BLCWhiskeyViewController alloc] init];
     UITabBarController *tabBarVC = [[UITabBarController alloc] init];
     tabBarVC.viewControllers = @[wineVC, whiskeyVC];
     tabBarVC.delegate = self;
@@ -42,17 +38,14 @@
     //MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
     //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
     //self.window.rootViewController = navigationController;
-=======
     //Override point for customization after application launches
     BLCMainMenuViewController *mainMenuViewController = [[BLCMainMenuViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
     self.window.rootViewController = navigationController;
->>>>>>> basic-nav
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-<<<<<<< HEAD
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
     NSLog(@"New View Controller Selected to %@", viewController.title);
@@ -64,10 +57,6 @@
     NSLog(@"New View Controller Selected to %@", viewController.title);
 }
 
-
-
-=======
->>>>>>> basic-nav
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
